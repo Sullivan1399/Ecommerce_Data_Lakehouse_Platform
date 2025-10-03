@@ -21,23 +21,29 @@ services:
       - "6379:6379"
     networks:
       - system_network
-
+  
   airflow-init:
     image: sullivan1399/airflow:2.7.1
     container_name: airflow-init
-    entrypoint: /bin/bash
     depends_on:
       - airflow-postgres
       - redis
-    networks:
-      - system_network
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres:5432/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@airflow-postgres:5432/airflow
+    command: >
+      bash -c "
+        airflow db upgrade &&
+        airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com
+      "
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
-      - ./deploy/airflow/start-airflow.sh:/usr/local/bin/start-airflow.sh
-    command: -c "/usr/local/bin/start-airflow.sh db_init"
-    
+    networks:
+      - system_network
 
   airflow-webserver:
     image: sullivan1399/airflow:2.7.1
@@ -46,9 +52,12 @@ services:
     depends_on:
       - airflow-postgres
       - redis
+      - airflow-init
     environment:
       &airflow-common-env
       AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres:5432/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
       AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@airflow-postgres:5432/airflow
@@ -57,13 +66,13 @@ services:
       AIRFLOW__CORE__PARALLELISM: "8"
       AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: "30"
       _PIP_ADDITIONAL_REQUIREMENTS: ""
-      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
     ports:
       - "8085:8080"
+    command: webserver
     networks:
       - system_network
 
@@ -74,6 +83,7 @@ services:
     depends_on:
       - airflow-postgres
       - redis
+      - airflow-init
     environment: *airflow-common-env
     volumes:
       - ./dags:/opt/airflow/dags
@@ -90,6 +100,7 @@ services:
     depends_on:
       - airflow-postgres
       - redis
+      - airflow-init
     environment:
       <<: *airflow-common-env
       AIRFLOW__CELERY__WORKER_CONCURRENCY: "1"
@@ -108,6 +119,7 @@ services:
     depends_on:
       - airflow-postgres
       - redis
+      - airflow-init
     environment: *airflow-common-env
     volumes:
       - ./dags:/opt/airflow/dags
