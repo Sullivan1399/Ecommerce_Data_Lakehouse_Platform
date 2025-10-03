@@ -1,0 +1,6 @@
+<configuration>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://tuankiet170-master:9000</value>
+  </property>
+</configuration>
