@@ -24,6 +24,7 @@ services:
   
   airflow-init:
     image: sullivan1399/airflow:2.7.1
+    profiles: ["init"]
     container_name: airflow-init
     depends_on:
       - airflow-postgres
@@ -52,7 +53,6 @@ services:
     depends_on:
       - airflow-postgres
       - redis
-      - airflow-init
     environment:
       &airflow-common-env
       AIRFLOW__CORE__EXECUTOR: CeleryExecutor
@@ -83,7 +83,6 @@ services:
     depends_on:
       - airflow-postgres
       - redis
-      - airflow-init
     environment: *airflow-common-env
     volumes:
       - ./dags:/opt/airflow/dags
@@ -100,7 +99,6 @@ services:
     depends_on:
       - airflow-postgres
       - redis
-      - airflow-init
     environment:
       <<: *airflow-common-env
       AIRFLOW__CELERY__WORKER_CONCURRENCY: "1"
@@ -119,7 +117,6 @@ services:
     depends_on:
       - airflow-postgres
       - redis
-      - airflow-init
     environment: *airflow-common-env
     volumes:
       - ./dags:/opt/airflow/dags
