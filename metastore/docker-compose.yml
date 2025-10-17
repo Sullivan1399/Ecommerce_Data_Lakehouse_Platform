@@ -15,7 +15,7 @@ services:
       - system_network
 
   hive-metastore:
-    image: sullivan1399/hive:2.3.4-postgresql-metastore
+    image: dinhhoa0102/hive:2.3.2-postgresql-metastore
     container_name: hive-metastore
     restart: unless-stopped
     environment:
@@ -23,7 +23,6 @@ services:
       - HIVE_METASTORE_DB_NAME=metastore
       - HIVE_METASTORE_DB_USER=ntk
       - HIVE_METASTORE_DB_PASS=123
-      - HADOOP_CONF_DIR=/etc/hadoop/conf
     depends_on:
       - postgres-metastore
     volumes:
