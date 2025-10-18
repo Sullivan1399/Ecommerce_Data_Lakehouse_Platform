@@ -1,0 +1,168 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "3faadb00-cda2-470b-b302-a3235de2d463",
+  "location" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_payment",
+  "last-sequence-number" : 4,
+  "last-updated-ms" : 1760772792941,
+  "last-column-id" : 2,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "PaymentMethod",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "PaymentKey",
+      "required" : false,
+      "type" : "long"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "spark",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 4003577610600110655,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 4003577610600110655,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 4412914495350613465,
+    "timestamp-ms" : 1759888641837,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251008015640-0000",
+      "added-data-files" : "1",
+      "added-records" : "3",
+      "added-files-size" : "790",
+      "changed-partition-count" : "1",
+      "total-records" : "3",
+      "total-files-size" : "790",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251008015640-0000",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_payment/metadata/snap-4412914495350613465-1-d7cb5802-5fb2-4003-8019-5355f735167c.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 2,
+    "snapshot-id" : 8025310522445475945,
+    "timestamp-ms" : 1760712736317,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251017145153-0002",
+      "added-data-files" : "1",
+      "added-records" : "3",
+      "added-files-size" : "790",
+      "changed-partition-count" : "1",
+      "total-records" : "3",
+      "total-files-size" : "790",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251017145153-0002",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_payment/metadata/snap-8025310522445475945-1-5fb8ac57-7039-4b0a-b3a5-d0bd2e4c6217.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 3,
+    "snapshot-id" : 2541415760092777007,
+    "timestamp-ms" : 1760712830192,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251017145326-0005",
+      "added-data-files" : "1",
+      "added-records" : "3",
+      "added-files-size" : "790",
+      "changed-partition-count" : "1",
+      "total-records" : "3",
+      "total-files-size" : "790",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251017145326-0005",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_payment/metadata/snap-2541415760092777007-1-2f3cd574-1423-424d-98d1-9e3857e55756.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 4,
+    "snapshot-id" : 4003577610600110655,
+    "timestamp-ms" : 1760772792941,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251018073242-0002",
+      "added-data-files" : "1",
+      "added-records" : "3",
+      "added-files-size" : "790",
+      "changed-partition-count" : "1",
+      "total-records" : "3",
+      "total-files-size" : "790",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251018073242-0002",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_payment/metadata/snap-4003577610600110655-1-5a47e493-bcb0-491a-a0da-a7649fd584b1.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1759888641837,
+    "snapshot-id" : 4412914495350613465
+  }, {
+    "timestamp-ms" : 1760712736317,
+    "snapshot-id" : 8025310522445475945
+  }, {
+    "timestamp-ms" : 1760712830192,
+    "snapshot-id" : 2541415760092777007
+  }, {
+    "timestamp-ms" : 1760772792941,
+    "snapshot-id" : 4003577610600110655
+  } ],
+  "metadata-log" : [ {
+    "timestamp-ms" : 1759888641837,
+    "metadata-file" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_payment/metadata/00000-96581476-7d4a-41f3-81fe-793375af6ef9.metadata.json"
+  }, {
+    "timestamp-ms" : 1760712736317,
+    "metadata-file" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_payment/metadata/00001-80efc254-b514-4b0b-b9e9-657b7304a1f3.metadata.json"
+  }, {
+    "timestamp-ms" : 1760712830192,
+    "metadata-file" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_payment/metadata/00002-02ad8bf0-7da4-476a-9430-4a63492ca957.metadata.json"
+  } ]
+}
