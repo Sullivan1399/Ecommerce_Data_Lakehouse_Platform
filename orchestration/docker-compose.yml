@@ -24,6 +24,7 @@ services:
   
   airflow-init:
     image: sullivan1399/airflow:2.7.1
+    profiles: ["init"]
     container_name: airflow-init
     depends_on:
       - airflow-postgres
