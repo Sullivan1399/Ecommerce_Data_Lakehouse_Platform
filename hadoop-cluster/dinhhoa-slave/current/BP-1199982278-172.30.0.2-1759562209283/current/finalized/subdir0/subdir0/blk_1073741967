@@ -1,0 +1,173 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "a8205828-6bad-4f60-bf4a-bcca4dd183d7",
+  "location" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_category",
+  "last-sequence-number" : 4,
+  "last-updated-ms" : 1760772787993,
+  "last-column-id" : 3,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "CategoryID",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 2,
+      "name" : "CategoryName",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "CategoryKey",
+      "required" : false,
+      "type" : "long"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "spark",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 4216202322255038827,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 4216202322255038827,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 2818925757734011441,
+    "timestamp-ms" : 1759888637645,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251008015640-0000",
+      "added-data-files" : "1",
+      "added-records" : "5",
+      "added-files-size" : "1092",
+      "changed-partition-count" : "1",
+      "total-records" : "5",
+      "total-files-size" : "1092",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251008015640-0000",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_category/metadata/snap-2818925757734011441-1-188a817a-736e-4689-8db0-301a98274189.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 2,
+    "snapshot-id" : 4949757643978135177,
+    "timestamp-ms" : 1760712732090,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251017145153-0002",
+      "added-data-files" : "1",
+      "added-records" : "5",
+      "added-files-size" : "1092",
+      "changed-partition-count" : "1",
+      "total-records" : "5",
+      "total-files-size" : "1092",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251017145153-0002",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_category/metadata/snap-4949757643978135177-1-10ad85a6-bd81-4068-9658-ca54cda6cada.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 3,
+    "snapshot-id" : 4139498831110805906,
+    "timestamp-ms" : 1760712827571,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251017145326-0005",
+      "added-data-files" : "1",
+      "added-records" : "5",
+      "added-files-size" : "1092",
+      "changed-partition-count" : "1",
+      "total-records" : "5",
+      "total-files-size" : "1092",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251017145326-0005",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_category/metadata/snap-4139498831110805906-1-cdb64989-0fae-49c0-ad5c-729e23606544.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 4,
+    "snapshot-id" : 4216202322255038827,
+    "timestamp-ms" : 1760772787993,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251018073242-0002",
+      "added-data-files" : "1",
+      "added-records" : "5",
+      "added-files-size" : "1092",
+      "changed-partition-count" : "1",
+      "total-records" : "5",
+      "total-files-size" : "1092",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251018073242-0002",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_category/metadata/snap-4216202322255038827-1-ecaedc2a-4ef8-410e-95f0-e79be4790155.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1759888637645,
+    "snapshot-id" : 2818925757734011441
+  }, {
+    "timestamp-ms" : 1760712732090,
+    "snapshot-id" : 4949757643978135177
+  }, {
+    "timestamp-ms" : 1760712827571,
+    "snapshot-id" : 4139498831110805906
+  }, {
+    "timestamp-ms" : 1760772787993,
+    "snapshot-id" : 4216202322255038827
+  } ],
+  "metadata-log" : [ {
+    "timestamp-ms" : 1759888637645,
+    "metadata-file" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_category/metadata/00000-7c214c90-d6e0-4b35-a694-7e872384f701.metadata.json"
+  }, {
+    "timestamp-ms" : 1760712732090,
+    "metadata-file" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_category/metadata/00001-78efcca9-0a16-41de-8008-51067b596402.metadata.json"
+  }, {
+    "timestamp-ms" : 1760712827571,
+    "metadata-file" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_category/metadata/00002-4f7e1c6a-3e48-4e4f-a7c7-ead0f4d56904.metadata.json"
+  } ]
+}
