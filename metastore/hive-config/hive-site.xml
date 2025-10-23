@@ -24,6 +24,6 @@
 
   <property>
     <name>hive.metastore.warehouse.dir</name>
-    <value>hdfs://tuankiet170-master:9000/user/ntk/warehouse</value>
+    <value>hdfs://tuankiet170-master:9000/data_lake/warehouse</value>
   </property>
 </configuration>

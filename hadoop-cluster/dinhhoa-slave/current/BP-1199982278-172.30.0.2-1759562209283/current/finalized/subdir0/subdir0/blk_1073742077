@@ -1,0 +1,83 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "63bf8353-8983-494e-bf3b-bf0aa2ae352a",
+  "location" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/price_recommendations",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1760920506115,
+  "last-column-id" : 3,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "product_id",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 2,
+      "name" : "best_price",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 3,
+      "name" : "estimated_revenue",
+      "required" : false,
+      "type" : "double"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "spark",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 4018543026142361401,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 4018543026142361401,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 4018543026142361401,
+    "timestamp-ms" : 1760920506115,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251020003453-0004",
+      "added-data-files" : "2",
+      "added-records" : "89",
+      "added-files-size" : "3697",
+      "changed-partition-count" : "1",
+      "total-records" : "89",
+      "total-files-size" : "3697",
+      "total-data-files" : "2",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251020003453-0004",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/price_recommendations/metadata/snap-4018543026142361401-1-1de4baea-65a7-431d-b386-39e79fe05a6f.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1760920506115,
+    "snapshot-id" : 4018543026142361401
+  } ],
+  "metadata-log" : [ ]
+}
