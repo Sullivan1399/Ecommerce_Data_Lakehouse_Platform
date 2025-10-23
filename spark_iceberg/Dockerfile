@@ -2,7 +2,7 @@ FROM apache/spark:3.5.3
 
 USER root
 
-RUN apt-get update && apt-get install -y wget curl unzip && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y wget curl unzip build-essential python3-dev python3-pip && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /opt/spark/jars-extra
 
@@ -13,6 +13,9 @@ RUN wget -q -O /opt/spark/jars-extra/iceberg-spark-runtime-3.5_2.12-1.6.1.jar \
 # Download postgres JDBC driver
 RUN wget -q -O /opt/spark/jars-extra/postgresql.jar \
     https://jdbc.postgresql.org/download/postgresql-42.6.0.jar
+
+# Download Python Library serving LightGBM model
+RUN pip3 install --no-cache-dir pandas pyarrow scikit-learn lightgbm joblib
 
 ENV PATH="$SPARK_HOME/bin:$PATH"
 

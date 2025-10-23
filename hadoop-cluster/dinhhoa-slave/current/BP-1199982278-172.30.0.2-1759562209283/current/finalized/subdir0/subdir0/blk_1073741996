@@ -1,0 +1,88 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "776dfc70-658a-489d-a1bc-14220e4854e4",
+  "location" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_customer",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1760836541103,
+  "last-column-id" : 4,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "CustomerID",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 2,
+      "name" : "gender",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "age",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 4,
+      "name" : "CustomerKey",
+      "required" : false,
+      "type" : "long"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "spark",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 5072474236969229082,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 5072474236969229082,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 5072474236969229082,
+    "timestamp-ms" : 1760836541103,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251019011529-0002",
+      "added-data-files" : "1",
+      "added-records" : "1000",
+      "added-files-size" : "6627",
+      "changed-partition-count" : "1",
+      "total-records" : "1000",
+      "total-files-size" : "6627",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251019011529-0002",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_customer/metadata/snap-5072474236969229082-1-d5d41425-f610-49c4-afa3-71f77b0a5cb8.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1760836541103,
+    "snapshot-id" : 5072474236969229082
+  } ],
+  "metadata-log" : [ ]
+}

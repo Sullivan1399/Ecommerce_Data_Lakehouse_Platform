@@ -1,0 +1,133 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "3acba209-bd07-4954-b52e-e5d1280ab5af",
+  "location" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/bronze.db/online_retail_raw",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1760836495021,
+  "last-column-id" : 13,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "customer_id",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 2,
+      "name" : "order_date",
+      "required" : false,
+      "type" : "date"
+    }, {
+      "id" : 3,
+      "name" : "product_id",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 4,
+      "name" : "category_id",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 5,
+      "name" : "category_name",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 6,
+      "name" : "product_name",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 7,
+      "name" : "quantity",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 8,
+      "name" : "price",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 9,
+      "name" : "payment_method",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 10,
+      "name" : "city",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 11,
+      "name" : "review_score",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 12,
+      "name" : "gender",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 13,
+      "name" : "age",
+      "required" : false,
+      "type" : "int"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "spark",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 6863340523612216077,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 6863340523612216077,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 6863340523612216077,
+    "timestamp-ms" : 1760836495021,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251019011434-0000",
+      "added-data-files" : "1",
+      "added-records" : "1000",
+      "added-files-size" : "24490",
+      "changed-partition-count" : "1",
+      "total-records" : "1000",
+      "total-files-size" : "24490",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251019011434-0000",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/bronze.db/online_retail_raw/metadata/snap-6863340523612216077-1-8dc7ddb0-3fb3-4af5-915f-2571d7c5decd.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1760836495021,
+    "snapshot-id" : 6863340523612216077
+  } ],
+  "metadata-log" : [ ]
+}

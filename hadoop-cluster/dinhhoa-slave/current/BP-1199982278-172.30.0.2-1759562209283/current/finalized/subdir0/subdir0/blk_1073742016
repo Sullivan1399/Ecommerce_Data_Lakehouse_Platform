@@ -1,0 +1,108 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "d203b1bb-fafc-47b4-b2a1-22fee4b170e7",
+  "location" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_date",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1760836550355,
+  "last-column-id" : 8,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "FullDate",
+      "required" : false,
+      "type" : "date"
+    }, {
+      "id" : 2,
+      "name" : "Year",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 3,
+      "name" : "Quarter",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 4,
+      "name" : "Month",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 5,
+      "name" : "Week",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 6,
+      "name" : "Day",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 7,
+      "name" : "DayOfWeek",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 8,
+      "name" : "DateKey",
+      "required" : false,
+      "type" : "long"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "spark",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 5150005451166684419,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 5150005451166684419,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 5150005451166684419,
+    "timestamp-ms" : 1760836550355,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "app-20251019011529-0002",
+      "added-data-files" : "1",
+      "added-records" : "342",
+      "added-files-size" : "4798",
+      "changed-partition-count" : "1",
+      "total-records" : "342",
+      "total-files-size" : "4798",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.3",
+      "app-id" : "app-20251019011529-0002",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "hdfs://tuankiet170-master:9000/data_lake/warehouse/gold.db/dim_date/metadata/snap-5150005451166684419-1-fb69e777-d06c-4e9f-a205-915402d20679.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1760836550355,
+    "snapshot-id" : 5150005451166684419
+  } ],
+  "metadata-log" : [ ]
+}
